@@ -1,64 +1,74 @@
 // Simple_Calc.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
 #include <stdlib.h>
 
 int main()
 {
-	std::cout << "Welcome to the C++ Calculator!\n";
-	int imagine = 2;
+	
+	int cnt = 1;
 	double v1 = 1;
 	double v2;
 	int op;
-	
-	while (v1 != 0) {
-		
-		std::cout << "Enter your first number or press 0 to exit.\n";
+	std::cout << "Welcome to the C++ Calculator!\n";
+
+	while (cnt == 1) {
+
+		std::cout << "Enter your first number: ";
 		std::cin >> v1;
 
-		if (v1 != 0) {
+		std::cout << "Enter your next number: ";
+		std::cin >> v2;
 
+		std::cout << "Choose your operation\n";
+		std::cout << " Press 1 to add, 2 to subtract, 3 to multiply and 4 to divide: \n";
+		std::cin >> op;
 
-				std::cout << "Enter your next number: \n";
-				std::cin >> v2;
+		switch (op) {
 
-				std::cout << "Choose your operation\n";
-				std::cout << " 1)Add  2)Subtract  3)Multiply  4)Divide \n";
-				std::cin >> op;
-
-				switch(op) {
-
-				case 1:
-					std::cout << "Your answer is: " << v1 + v2 << "\n";
-					break;
-				case 2:
-					std::cout << "Your answer is: " << v1 - v2 << "\n";
-					break;
-				case 3:
-					std::cout << "Your answer is: " << v1 * v2 << "\n";
-					break;
-				case 4:
-					std::cout << "Your answer is: " << v1 / v2 << "\n";
-					break;
-				default:
-					std::cout << "Error: Invalid operation or character. Please type correct numericals and choose from the four options given above.\n";
-					break;
-				}
-
-					}
-		else 
-		{
-			std::cout << "Thanks for using calc!\n" << std::endl;
-			void exit();
+		case 1:
+			std::cout << "Your answer is: " << v1 + v2 << "\n";
+			break;
+		case 2:
+			std::cout << "Your answer is: " << v1 - v2 << "\n";
+			break;
+		case 3:
+			std::cout << "Your answer is: " << v1 * v2 << "\n";
+			break;
+		case 4:
+			std::cout << "Your answer is: " << v1 / v2 << "\n";
+			break;
+		default:
+			std::cout << "Error: Unsupprted character/numerical. Please type correct numericals and choose from the four options given above.\n";
+			break;
 		}
 
+		std::cout << "Do you wish to continue?\n";
+		std::cout << "Press 0 to exit or 1 to continue: ";
+		std::cin >> cnt;
+		if (cnt == 0) {
+			std::cout << "Thanks for using calc!\n";
+			void exit();
+			system("pause");
+		}
 	}
+	while (cnt > 1 || cnt < 0) {
+
+		std::cout << "Error: Unsupprted character/numerical. Please type correct numericals and choose from the four options given above.\n";
+		std::cout << "Do you wish to continue?\n";
+		std::cout << "Press 0 to exit or 1 to continue: ";
+		std::cin >> cnt;
+
+		if (cnt == 1) {
+			return main();
+
+		}
+		else {
+			void exit();
+
+		}
+		system("pause");
+
+	}
+
 }
-	
-
-	// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-	// Debug program: F5 or Debug > Start Debugging menu
-
-
-
