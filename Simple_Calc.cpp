@@ -5,7 +5,7 @@
 
 int main()
 {
-	
+
 	int cnt = 1;
 	double v1 = 1;
 	double v2;
@@ -21,7 +21,7 @@ int main()
 		std::cin >> v2;
 
 		std::cout << "Choose your operation\n";
-		std::cout << " Press 1 to add, 2 to subtract, 3 to multiply and 4 to divide: \n";
+		std::cout << " Press 1 to add, 2 to subtract, 3 to multiply and 4 to divide: ";
 		std::cin >> op;
 
 		switch (op) {
