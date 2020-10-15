@@ -54,7 +54,7 @@ int main()
 	}
 	while (cnt > 1 || cnt < 0) {
 
-		std::cout << "Error: Unsupprted character/numerical. Please type correct numericals and choose from the four options given above.\n";
+		std::cout << "Error: Unsupprted character/numerical. Please type correct numericals and choose from the two options given above.\n";
 		std::cout << "Do you wish to continue?\n";
 		std::cout << "Press 0 to exit or 1 to continue: ";
 		std::cin >> cnt;
