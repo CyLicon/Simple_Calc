@@ -10,7 +10,7 @@ int main()
 	double v1 = 1;
 	double v2;
 	int op;
-	std::cout << "Welcome to the C++ Calculator!\n";
+	std::cout << "Welcome to the Simple C++ Calculator by Cylicon!\n";
 
 	while (cnt == 1) {
 
